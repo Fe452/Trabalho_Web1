@@ -105,3 +105,167 @@ footer {
     border-radius: 5px;
     margin-top: 5px;
 }
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+.secao-autores {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    gap: 40px;
+    background-color: #254d85;
+}
+
+@media (max-width: 900px) {
+    .secao-autores {
+        flex-direction: column;
+        align-items: center;
+    }
+    .texto-apresentacao {
+        max-width: 100%;
+        text-align: center;
+        padding-top: 0;
+    }
+    .container-cartoes {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.texto-apresentacao {
+    flex: 1; 
+    max-width: 350px;
+    padding-top: 50px; 
+}
+
+.texto-apresentacao h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.container-cartoes {
+    flex: 2; 
+    display: flex;
+    justify-content: space-around; 
+    gap: 30px;
+    padding: 20px;
+}
+
+.cartao-autor-moldura {
+
+    width: 350px; 
+    height: 490px; 
+
+    background-image: url('../Imagens/autores/carta2.png');
+
+
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+    border-radius: 20px; 
+    
+    position: relative; 
+    
+    overflow: hidden; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.cartao-autor-moldura:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.nome-hp-container {
+    position: absolute;
+    top: 28px; 
+    left: 30px; 
+    right: 65px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-weight: bold;
+    color: black; 
+}
+.nome-autor-moldura { font-size: 1.1em; margin-left: 10px; }
+.hp-autor { font-size: 1em; color: black; } 
+
+.area-ilustracao {
+    position: absolute;
+    top: 60px; 
+    left: 40px;
+    width: 270px;
+    height: 190px;
+    overflow: hidden; 
+}
+
+.area-ilustracao img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+.detalhes-base {
+    position: absolute;
+    top: 262px; 
+    left: 100px;
+    right: 40px;
+    font-size: 0.6em;
+    color: black;
+    text-align: left;
+}
+
+.area-ataques {
+    position: absolute;
+    top: 310px; 
+    left: 40px;
+    right: 40px;
+}
+
+.ataque {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1em;
+    color: black;
+}
+.nome-ataque {
+    flex-grow: 1;
+}
+.dano {
+    font-size: 1.1em;
+}
+
+.area-fraquezas-custo {
+    position: absolute;
+    bottom: 70px; 
+    left: 40px;
+    right: 40px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7em;
+    font-weight: bold;
+    color: black;
+}
+.fraqueza { color: #222121; } 
+.resistencia { color: #222121; } 
+.custo-retirada { color: #222121; } 
+
+.regra-final {
+    position: absolute;
+    bottom: 35px; 
+    left: 40px;
+    right: 40px;
+    font-size: 0.75em;
+    text-align: center;
+    color: #1a1919;
+}
