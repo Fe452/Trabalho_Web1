@@ -31,3 +31,77 @@ nav ul  {
     align-items: center;
     gap: 1rem;
 }
+nav ul li img {
+    vertical-align: middle;
+    border-radius: 8px;
+    max-width: 80px;
+}
+
+/*body {
+    background-color: #275183;
+
+    background-image: url("../img/background.png");
+
+    background-repeat: repeat;
+    background-size: 235px 140px;
+    background-position: 0 0;
+} */
+
+body {
+    background-color: #1a3a66;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 1rem;
+}
+
+main {
+    margin: 1rem auto;
+    background-color: #275183;
+    text-align: center;
+    padding: 2rem;
+    color: #f6cd07;
+    
+    border-radius: 10px;
+}
+
+main .landscape {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem;
+}
+
+main .botao-iniciar img {
+    width: 150px;
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
+}
+
+aside .left{
+    background-color: #37841b;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+    float: left;
+}
+
+footer {
+    background-color: #275183;
+    text-align: center;
+    padding: 1rem;
+    color: #f6cd07;
+    border-top: 2px solid #bd9e5d;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 5px;
+}
