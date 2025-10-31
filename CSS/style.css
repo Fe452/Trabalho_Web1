@@ -63,12 +63,14 @@ body {
 }
 
 main {
+    text-align: center;
+    color: #f6cd07;
+}
+
+.quadroGeral{
     margin: 1rem auto;
     background-color: #275183;
-    text-align: center;
     padding: 2rem;
-    color: #f6cd07;
-    
     border-radius: 10px;
 }
 
@@ -112,13 +114,14 @@ footer {
         box-sizing: border-box;
     }
 
-.secao-autores {
+.quadro {
     display: flex;
     max-width: 1200px;
     margin: 40px auto;
     padding: 20px;
     gap: 40px;
     background-color: #254d85;
+    border-radius: 10px;
 }
 
 @media (max-width: 900px) {
@@ -135,17 +138,24 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+    .secao-coluna {
+                flex-direction: column;
+            }
 }
 
 .texto-apresentacao {
     flex: 1; 
-    max-width: 350px;
     padding-top: 50px; 
 }
 
 .texto-apresentacao h1 {
     font-size: 2.5em;
     margin-bottom: 15px;
+}
+
+h2.texto-apresentacao {
+    font-size: 2em;
+    text-align: center;
 }
 
 .container-cartoes {
@@ -269,3 +279,55 @@ footer {
     text-align: center;
     color: #1a1919;
 }
+
+.secao-coluna {
+            display: flex; 
+            gap: 40px;
+            align-items: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .interior-coluna {
+            flex: 1;
+            text-align: center;
+        }
+
+        .linha-amarela {
+            height: 5px;
+            width: 100px;
+            background-color: #fddb00;
+            border: none;
+            margin: 25px 0;
+        }
+
+        .interior-coluna p {
+            color: #ffffff;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+
+        .interior-coluna img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .secao-banner-amarelo {
+            background-color: #fddb00;
+            padding: 50px 20px;
+            text-align: center;
+            
+            background-image: radial-gradient(circle, #fee85d 1.5px, transparent 1.5px);
+            background-size: 15px 15px;
+        }
+
+        .secao-banner-amarelo p {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #222;
+            max-width: 800px; 
+            margin: 0 auto;
+            line-height: 1.4;
+        }
