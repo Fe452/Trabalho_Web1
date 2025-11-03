@@ -331,3 +331,61 @@ h2.texto-apresentacao {
             margin: 0 auto;
             line-height: 1.4;
         }
+
+
+    .girar{
+    border-bottom: 3px solid #000;
+    padding-bottom: 150px;
+    }
+
+    .base{
+    margin: 0;
+    padding: 50px 50px 100px 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #F9F9F9;
+    color: #000;
+    --color1: #fa1eb1;
+    --color2: #4706eb;
+    --color3: rgb(162, 244, 162);
+    --color4: #ff7f50;
+    height: 40vh;
+    display: grid;
+    place-items: center;
+    }
+
+    .conteiner{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: (10000px);
+    animation: rotate3d 30s linear infinite;
+    div{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-style: preserve-3d;
+        transform: rotateY(calc(var(--i) * 20deg)) translateZ(580px);
+        transition: transform 1s;
+
+
+        img{
+            width: 200px;
+            height: 200px;
+            background-color: #121212;
+            color: #fff;
+            display: grid;
+            place-items: center;
+            box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+        }
+    }
+    }
+
+    @keyframes rotate3d {
+    from{
+        transform: perspective(10000px) rotateY(0deg);
+    }
+    to{
+        transform: perspective(10000px) rotateY(360deg);
+    }
+}
