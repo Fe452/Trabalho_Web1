@@ -1,32 +1,179 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pokemon TCG</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="icon" href="Imagens/Icone.png" type="image/png">
-    </head>
-    
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="1-index.html">Início</a></li>
-                    <li><a href="2-introducao.html">Introdução</a></li>
-                    <li><a href="3-regras.html">Regras</a></li>
-                    <li><a href="4-colecoes.html">Coleções</a></li>
-                    <li><a href="5-campeonatos.html">Campeonatos</a></li>
-                    <li><a href="6-digital.html">Digital</a></li>
-                    <li><a href="7-curiosidades.html">Curiosidades</a></li>
-                    <li><a href="8-fotos.html">Fotos</a></li>
-                    <li><a href="9-videos.html">Vídeos</a></li>
-                    <li><a href="10-tabela.html">Tabela</a></li>
-                    <li><a href="11-sobre.html">Autores</a></li>
-                </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="Imagens/Icone.png" type="image/png">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .banner {
+            height: 70vh;
+            background-color: #333;
+            background-image: url('Imagens/videos/cartas2.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+            color: white;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .container-submenu {
+            position: sticky;
+            top: 0px;
+            z-index: 1000;
+        }
+
+        #submenu-ancora {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 14px;
+            margin: 0;
+        }
+
+        #submenu-ancora a {
+            padding: 14px 25px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            transition: background-color 0.2s;
+        }
+
+        #submenu-ancora a:hover {
+            background-color: #ddd;
+        }
+
+        .secao-conteudo {
+            padding-top: 80px; 
+            min-height: 70vh;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .secao-conteudo h2 {
+            font-size: 2.5em;
+            color: #f6cd07; 
+            border-bottom: 2px solid #bd9e5d;
+            padding-bottom: 10px;
+        }
+        
+
+        
+        .container-video {
+            position: relative;
+            width: 100%;
+            margin: auto;
+            aspect-ratio: 16/9;
+        }
+        
+        .video-responsivo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        
+    </style>
+
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+        window.scrollTo(0, 0);
+            }, 0);
+        };
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="1-index.html">Início</a></li>
+                <li><a href="2-introducao.html">Introdução</a></li>
+                <li><a href="3-regras.html">Regras</a></li>
+                <li><a href="4-colecoes.html">Coleções</a></li>
+                <li><a href="5-campeonatos.html">Campeonatos</a></li>
+                <li><a href="6-digital.html">Digital</a></li>
+                <li><a href="7-curiosidades.html">Curiosidades</a></li>
+                <li><a href="8-fotos.html">Fotos</a></li>
+                <li><a href="9-videos.html">Vídeos</a></li>
+                <li><a href="10-tabela.html">Tabela</a></li>
+                <li><a href="11-sobre.html">Autores</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="banner">
+        </section>
+
+        <div class="container-submenu">
+            <nav id="submenu-ancora">
+                <li><a href="#secao1">Opção 1 (Cartas)</a></li>
+                <li><a href="#secao2">Opção 2 (Produtos)</a></li>
+                <li><a href="#secao3">Opção 3 (Destaques)</a></li>
+                <li><a href="#secao4">Opção 4 (Como Jogar)</a></li>
+                <li><a href="#secao5">Opção 5 (Onde Comprar)</a></li>
             </nav>
-        </header>
-    </body>
+        </div>
+
+        <div class="quadroGeral">
+            <section id="secao1" class="secao-conteudo">
+                <h2>Mega Ascensão</h2>
+
+                <article class="container-video">
+                    <iframe class="video-responsivo" 
+                        width="560" height="315" src="https://www.youtube.com/embed/pHZneOidj9A?si=7-dMSD7VuVqQa2nF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </article>
+
+                <p style="color: white;">Aqui vai todo o conteúdo sobre as Cartas em Destaque...</p>
+            </section>
+
+            <section id="secao2" class="secao-conteudo">
+                <h2>Título da Seção 2 (Produtos)</h2>
+                <p style="color: white;">Aqui vai todo o conteúdo sobre os Produtos...</p>
+            </section>
+
+            <section id="secao3" class="secao-conteudo">
+                <h2>Título da Seção 3 (Destaques)</h2>
+                <p style="color: white;">Aqui vai todo o conteúdo sobre Destaques da Expansão...</p>
+            </section>
+
+            <section id="secao4" class="secao-conteudo">
+                <h2>Título da Seção 4 (Como Jogar)</h2>
+                <p style="color: white;">Aqui vai todo o conteúdo sobre Como Jogar...</p>
+            </section>
+
+            <section id="secao5" class="secao-conteudo">
+                <h2>Título da Seção 5 (Onde Comprar)</h2>
+                <p style="color: white;">Aqui vai todo o conteúdo sobre Onde Comprar...</p>
+            </section>
+        </div>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/n5fe3pwClcw?si=YjsFmyKJH8DgBEVw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/uixaHvDbpD8?si=D4oEGXe7h_ZaW2aR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/qGrYN7bNT1Q?si=KjLsY3nDgM8SEP0k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </main>
+
+    <footer>
+        <p>Trabalho de Programação Web 1 - Hobby</p>
+    </footer>
+
+</body>
 </html>
-    
