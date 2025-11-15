@@ -66,6 +66,10 @@ main.flex {
     align-items: center;
 }
 
+main {
+    color: #f6cd07;
+}
+
 .container{
     display: flex;
     justify-content: center;
@@ -80,6 +84,18 @@ main.flex {
     padding: 2rem;
     border-radius: 10px;
     color: #f6cd07;
+}
+.quadro {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-evenly safe;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    gap: 40px;
+    background-color: #254d85;
+    border-radius: 10px;
 }
 
 main .landscape {
@@ -101,7 +117,7 @@ main .botao-iniciar img:hover {
 }
 
 footer {
-  font: ;
+  /*font: ;*/
   margin: 0;               /* remove shifting margin */
   width: 100%;
   flex-shrink: 0;
@@ -150,43 +166,16 @@ footer h1 {
     }
 
 
-
-@media (max-width: 900px) {
-    .secao-autores {
-        flex-direction: column;
-        align-items: center;
-    }
-    .texto-apresentacao {
-        max-width: 100%;
-        text-align: center;
-        padding-top: 0;
-    }
-    .container-cartoes {
-        flex-direction: column;
-        align-items: center;
-    }
-    .secao-coluna {
-        flex-direction: column;
-    }
-    .galeria-simples-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .galeria-simples-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 .texto-apresentacao {
     flex: 1; 
-    padding-top: 50px; 
+    padding-top: 50px;
+    text-align: center;
 }
 
 .texto-apresentacao h1 {
     font-size: 2.5em;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 h2.texto-apresentacao {
@@ -915,4 +904,94 @@ html {
     font-size: 0.9em;
     font-weight: bold;
     color: #f6cd07; 
+}
+
+
+@media (max-width: 900px) {
+    .secao-autores {
+        flex-direction: column;
+        align-items: center;
+    }
+    .texto-apresentacao {
+        max-width: 100%;
+        text-align: center;
+        padding-top: 0;
+    }
+    .container-cartoes {
+        flex-direction: column;
+        align-items: center;
+        flex: none;
+        width: 100%;
+    }
+    .secao-coluna {
+        flex-direction: column;
+    }
+    .galeria-simples-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cartao-autor-moldura{
+        width: 245px; 
+        height: 343px;
+        margin-bottom: 20px;
+    }
+    .quadro {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .interior-coluna {
+        width: 100%; 
+    }
+    .secao-coluna.inverter{
+        flex-direction: column-reverse;
+    }
+    .container-cartoes .nome-hp-container {
+    top: 20px;
+    left: 21px;
+    right: 45px;
+    }
+    .container-cartoes .nome-autor-moldura { 
+        font-size: 0.8em; 
+        margin-left: 7px; 
+    }
+    .container-cartoes .hp-autor { 
+        font-size: 0.7em; 
+    } 
+    .container-cartoes .area-ilustracao {
+        top: 42px;
+        left: 28px;
+        width: 189px;
+        height: 133px;
+    }
+    .container-cartoes .detalhes-base {
+        top: 183px;
+        left: 70px;
+        right: 28px;
+        font-size: 0.6em;
+    }
+    .container-cartoes .area-ataques {
+        top: 217px;
+        left: 28px;
+        right: 28px;
+    }
+    .container-cartoes .ataque { 
+        font-size: 0.8em; 
+    }
+    .container-cartoes .area-fraquezas-custo {
+        bottom: 49px;
+        left: 28px;
+        right: 28px;
+        font-size: 0.6em;
+    }
+    .container-cartoes .regra-final {
+        bottom: 25px;
+        left: 28px;
+        right: 28px;
+        font-size: 0.65em;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria-simples-grid {
+        grid-template-columns: 1fr;
+    }
 }
