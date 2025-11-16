@@ -96,6 +96,7 @@ main {
     gap: 40px;
     background-color: #254d85;
     border-radius: 10px;
+    align-items: flex-start;
 }
 
 main .landscape {
@@ -323,7 +324,7 @@ div .regra-final p{
     margin: 25px 0;
 }
 
-.interior-coluna p, .quadroGeral p, .textoP{
+.interior-coluna p, .quadroGeral p, .textoP, .secao-conteudo p{
     color: #ffffff;
     font-size: 1.1em;
     margin-bottom: 30px;
@@ -805,20 +806,6 @@ html {
         scroll-behavior: smooth;
     }
 
-    .banner {
-    height: 70vh;
-    background-color: #333;
-    background-image: url('../Imagens/videos/cartas2.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3em;
-    color: white;
-    text-shadow: 2px 2px 4px #000;
-}
-
 .container-submenu {
     position: sticky;
     top: 0px;
@@ -849,24 +836,30 @@ html {
 }
 
 .secao-conteudo {
-    padding-top: 80px; 
+    padding-top: 10px; 
     min-height: 70vh;
     padding-left: 30px;
     padding-right: 30px;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
 }
 
 .secao-conteudo h2 {
-    font-size: 2.5em;
+    font-size: 1.8em;
     color: #f6cd07; 
-    border-bottom: 2px solid #bd9e5d;
     padding-bottom: 10px;
 }
 
 .container-video {
     position: relative;
     width: 100%;
-    margin: auto;
+    max-width: 800px;
     aspect-ratio: 16/9;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
         
 .video-responsivo {
@@ -931,6 +924,13 @@ html {
     font-size: 0.9em;
     font-weight: bold;
     color: #f6cd07; 
+}
+
+.titulo-page{ 
+    padding: 24px 20px; 
+    background: #275183; 
+    border-bottom: 3px solid #fddb00;
+    text-align: center;
 }
 
 
