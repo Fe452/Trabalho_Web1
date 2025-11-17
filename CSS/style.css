@@ -173,7 +173,7 @@ footer h1 {
     text-align: center;
 }
 
-.texto-apresentacao h1 {
+.texto-apresentacao h1, .titulo-page h1 {
     font-size: 2.5em;
     margin-bottom: 15px;
     text-align: center;
@@ -336,6 +336,8 @@ div .regra-final p{
     height: auto;
     border-radius: 8px;
 }
+
+
 
 .secao-banner-amarelo {
     background-color: #fddb00;

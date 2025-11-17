@@ -8,6 +8,69 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon" href="Imagens/Icone.png" type="image/png">
 
+        <style>
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .info-coluna {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .info-icone img{
+            width: 36px;
+            height: 36px;
+        }
+
+        .info-icone {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .info-coluna h3 {
+            font-size: 1.1em;
+            color: #f6cd07;
+            margin-bottom: 10px;
+        }
+
+        .quadroGeral .info-coluna p,
+        .quadro .info-coluna p {
+            color: #FFFFFF;
+            font-size: 0.9em;
+            line-height: 1.5;
+            margin-bottom: 5px;
+            word-break: break-word;
+        }
+        
+        .interior-coluna.info-bloco {
+             text-align: left;
+        }
+        .interior-coluna.info-bloco h2 {
+             text-align: left;
+        }
+
+        
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .interior-coluna.info-bloco h2 {
+                 text-align: center;
+            }
+        }
+    </style>
+
     </head>
     
     <body>
@@ -30,10 +93,18 @@
         </header>
 
         <main>
+
+            <section class="titulo-page">
+                <h1>Sobre os Autores</h1>
+                <p class="textoP">
+                    Todo Treinador começa uma jornada. Esta é a nossa.
+                </p>
+            </section>
+
             <div class="quadro">
 
                 <section class="texto-apresentacao">
-                    <h1>Sobre os Autores</h1>
+                    <h1>Escolha do Tema</h1>
                     <p class="textoP">Descrição e apresnetaçõ dos autores. blablablablablaalablalabalablab</p>
                 </section>
         
@@ -50,7 +121,7 @@
                         </div>
                         
                         <div class="detalhes-base">
-                            <p class="infos-autor">Engenheiro. Altura: x.xxm, Peso: xxkg.</p>
+                            <p class="infos-autor">Engenheiro. Altura: 1,67, Peso: 50kg.</p>
                         </div>
                     
                         <div class="area-ataques">
@@ -59,15 +130,15 @@
                                 <span class="dano">120</span>
                             </div>
                             <div class="ataque">
-                                <p class="nome-ataque">Resiliência</p>
-                                <span class="dano">50</span>
+                                <p class="nome-ataque">Determinação</p>
+                                <span class="dano">75</span>
                             </div>
                         </div>
                         
                         <div class="area-fraquezas-custo">
                             <span class="texto-fraqueza">Fraqueza:  +20</span>
                             <span class="texto-fraqueza">Resistência:  -10</span>
-                            <span class="texto-fraqueza">Custo: </span>
+                            <span class="texto-fraqueza">Custo: 2 ener.</span>
                         </div>
                     
                         <div class="regra-final">
@@ -118,50 +189,126 @@
 
             <section class="secao-banner-amarelo">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at bibendum enim. Mauris sodales posuere nisl dapibus pellentesque. 
+                    Todos podem ver as táticas de minhas conquistas, mas ninguém consegue discernir a estrátegia que gerou as vitórias. 
                 </p>
             </section>
 
-            <section class="secao-coluna">
+            <section>
                 <div class="quadro">
-                    <article class="interior-coluna">
-                        <h2 class="texto-apresentacao">Porque a Escolha do Tema?</h2>
+
+                    
+                    <article class="interior-coluna texto-info">
+                        
+                        <h2 class="texto-apresentacao">Sobre o Felipe</h2>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at bibendum enim. Mauris sodales posuere nisl dapibus pellentesque. Nulla vehicula vehicula pulvinar. Vestibulum ut pellentesque arcu. Nulla facilisis pretium placerat. Mauris suscipit, tortor at congue fringilla, turpis mauris viverra est, pretium pharetra risus tortor pellentesque ex. Pellentesque purus lectus, dignissim eu leo id, laoreet maximus ipsum. In pulvinar aliquet commodo. Aenean ultricies enim luctus consectetur sagittis. Nullam pretium, nulla a viverra viverra, lectus ipsum blandit ligula, at cursus dolor libero at est. Sed lobortis elementum venenatis. Fusce pulvinar urna at sem bibendum, in condimentum turpis auctor. Nulla ullamcorper nec ex sed porttitor. Nullam aliquam facilisis faucibus.
                         </p>
-                    </article>
-        
+                
+                        <div class="info-grid">
+                            <article class="info-coluna">
+                                <div class="info-icone">
+                                    <img src="Imagens/autores/universidade.png" alt="Ícone Universidade">
+                                </div>
+                                <h3>TURMA</h3>
+                                <p>4º Periodo de Engenharia de Computação</p>
+                            </article>
+                            
+                            <article class="info-coluna">
+                                <div class="info-icone">
+                                    <img src="Imagens/autores/e-mail.png" alt="Ícone Email">
+                                </div>
+                                <h3>EMAIL</h3>
+                                <p>felipe4.silveira@alunos.ifsuldeminas.edu.br</p>
+                            </article>
+                                
+                            <article class="info-coluna">
+                                <div class="info-icone">
+                                    <img src="Imagens/autores/whatsapp.png" alt="Ícone Telefone">
+                                </div>
+                                <h3>TELEFONE</h3>
+                                <p>(35) 98435-2792</p>
+                            </article>
+                            
+                        </div>
+                
+                        <div style="font-size: 0.7em; color: #bdc3c7; text-align: center; margin-top: 20px;">
+                            Ícones feitos por 
+                            <a href="https://www.freepik.com" title="Freepik" style="color: #f6cd07;">Freepik</a> e 
+                            <a href="https://www.flaticon.com/br/autores/prosymbols-premium" title="Prosymbols Premium" style="color: #f6cd07;">Prosymbols Premium</a> 
+                            de <a href="https://www.flaticon.com/br/" title="Flaticon" style="color: #f6cd07;">www.flaticon.com</a>
+                        </div>
+                        
+                    </article> 
+                    
                     <article class="interior-coluna">
                         <img src="Imagens/autores/FelipePok.png" alt="Img">
                     </article>
                 </div>
             </section>
+
     
     
-    
-            <section class="secao-coluna inverter">
+            <div class="secao-coluna inverter">
                 
-                <div class="quadro">
+                <section class="quadro">
                     <article class="interior-coluna">
                         <img src="Imagens/autores/carolPok.png" alt="Img">
                     </article>
         
-                    <article class="interior-coluna">
-                        <h2 class="texto-apresentacao">Porque a Escolha do Tema?</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at bibendum enim. Mauris sodales posuere nisl dapibus pellentesque. Nulla vehicula vehicula pulvinar. Vestibulum ut pellentesque arcu. Nulla facilisis pretium placerat. Mauris suscipit, tortor at congue fringilla, turpis mauris viverra est, pretium pharetra risus tortor pellentesque ex. Pellentesque purus lectus, dignissim eu leo id, laoreet maximus ipsum. In pulvinar aliquet commodo. Aenean ultricies enim luctus consectetur sagittis. Nullam pretium, nulla a viverra viverra, lectus ipsum blandit ligula, at cursus dolor libero at est. Sed lobortis elementum venenatis. Fusce pulvinar urna at sem bibendum, in condimentum turpis auctor. Nulla ullamcorper nec ex sed porttitor. Nullam aliquam facilisis faucibus.
-                        </p>
-                    </article>
-        
-                    
-                </div>
-            </section>
+                    <div class="interior-coluna">
+                        <article>
+                            <h2 class="texto-apresentacao">Sobre a Caroline</h2>
+                            <p>
+                                Eu sou a Caroline, uma das desenvolvedoras deste site. Como uma entusiasta em engenharia, gosto de analisar cada passo e costumo observar atentamente o que acontece ao meu redor. Minha paixão é resolver problemas complexos, seja programando ou até me divertindo. Neste projeto, foquei em construir um site completamente responsivo, focada na arquitetura do CSS, como também nas funcionalidades das páginas. Meu objetivo era garantir que o site tivesse um layout limpo, como também rápido e fácil de usar.
+                            </p>
+                        </article>
+                        
+                        <div class="info-grid">
+                            <article class="info-coluna">
+                                <div class="info-icone">
+                                    <img src="Imagens/autores/universidade.png" alt="Ícone Universidade">
+                                </div>
+                                <h3>TURMA</h3>
+                                <p>4º Periodo de Engenharia de Computação</p>
+                            </article>
+                            
+                            <article class="info-coluna">
+                                <div class="info-icone">
+                                    <img src="Imagens/autores/e-mail.png" alt="Ícone Email">
+                                </div>
+                                <h3>EMAIL</h3>
+                                <p>caroline.bertoldi@alunos.ifsuldeminas.edu.br</p>
+                            </article>
+                                
+                            <article class="info-coluna">
+                                <div class="info-icone">
+                                    <img src="Imagens/autores/whatsapp.png" alt="Ícone Telefone">
+                                </div>
+                                <h3>TELEFONE</h3>
+                                <p>(35) 99705-7020</p>
+                            </article>
+                        
+                        </div> 
+                        <div style="font-size: 0.7em; color: #bdc3c7; text-align: center; margin-top: 20px;">
+                            Ícones feitos por 
+                            <a href="https://www.freepik.com" title="Freepik" style="color: #f6cd07;">Freepik</a> e 
+                            <a href="https://www.flaticon.com/br/autores/prosymbols-premium" title="Prosymbols Premium" style="color: #f6cd07;">Prosymbols Premium</a> 
+                            de <a href="https://www.flaticon.com/br/" title="Flaticon" style="color: #f6cd07;">www.flaticon.com</a>
+                        </div>
+
+                        
+                    </div>
+                </section>
+            </div>
         </main>
-        <footer>
-            <h1>Trabalho de Programação Web 1 - Hobby</h1>
-        </footer>
-    </body>
-</html>
+                            
+            <footer>
+        
+                <h1>Trabalho de Programação Web 1 - Hobby</h1>
+            </footer>
+        </body>
+        </html>
+                    
     
     
 
