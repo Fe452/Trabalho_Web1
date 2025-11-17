@@ -1057,8 +1057,7 @@ html {
     margin: 0 auto;
     position: relative;
     gap: 16px;
-    padding: 20px; /* Added padding */
-    background: rgba(0,0,0,0.2); /* Added semi-transparent background */
+    padding: 20px; /* Added padding */ 
     border-radius: 12px; /* Added border radius */
 }
 
@@ -1214,8 +1213,7 @@ html {
 main.colecoes{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
@@ -1263,6 +1261,8 @@ main.colecoes img {
     margin-bottom: 40px;
     position: relative;
     overflow: hidden;
+    border-radius: 12px;
+    margin-top: 40px;
 }
 
 .bw-header__images {
@@ -1611,3 +1611,442 @@ aside.proximo-pagina a {
     }
 }
 
+.jogo-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: #1a3a5c; 
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.jogo-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.jogo-container img {
+    flex: 0 0 25%;
+    max-width: 25%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.jogo-container img:hover {
+    transform: scale(1.05);
+}
+
+.jogo-container .texto {
+    flex: 1;
+    color: #fff;
+}
+
+.jogo-container h2 {
+    color: #f6cd07;
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.jogo-container p {
+    color: #ddd;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.jogo-container ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 15px 0;
+}
+
+.jogo-container ul li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #ddd;
+}
+
+.jogo-container ul li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #f6cd07;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Botão de link */
+.button-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #f6cd07, #bd9e5d);
+    color: #275183;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button-link:hover {
+    background: linear-gradient(135deg, #bd9e5d, #f6cd07);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .jogo-container {
+        gap: 15px;
+        padding: 25px;
+    }
+    
+    .jogo-container img {
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+}
+
+@media (max-width: 880px) {
+    .jogo-container {
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .jogo-container img {
+        flex: 0 0 auto;
+        max-width: 60%; /* Limita a largura da imagem */
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .jogo-container h2 {
+        font-size: 24px;
+    }
+    
+    .jogo-container ul {
+        text-align: left; /* Mantém listas alinhadas à esquerda */
+        max-width: 400px;
+        margin: 15px auto;
+    }
+}
+
+@media (max-width: 580px) {
+    .jogo-container {
+        padding: 15px;
+    }
+    
+    .jogo-container img {
+        max-width: 80%; /* Imagem maior em telas pequenas */
+    }
+    
+    .jogo-container h2 {
+        font-size: 20px;
+    }
+    
+    .jogo-container p {
+        font-size: 14px;
+    }
+    
+    .jogo-container ul li {
+        font-size: 14px;
+        padding: 6px 0;
+        padding-left: 20px;
+    }
+    
+    .jogo-container ul li:before {
+        font-size: 14px;
+    }
+    
+    .button-link {
+        display: block;
+        text-align: center;
+        width: 100%;
+        max-width: 280px;
+        margin: 15px auto 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .jogo-container {
+        padding: 12px;
+    }
+    
+    .jogo-container img {
+        max-width: 100%; /* Usa toda largura disponível */
+    }
+    
+    .jogo-container h2 {
+        font-size: 18px;
+    }
+}
+
+/* Formulário de Contato */
+.form-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #1a3a5c, #254d85);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #f6cd07;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 14px 16px;
+    border: 2px solid rgba(246, 205, 7, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    font-size: 15px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    color: #1a3a5c;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #f6cd07;
+    box-shadow: 0 0 0 3px rgba(246, 205, 7, 0.2);
+    background: #fff;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+.char-counter {
+    font-size: 12px;
+    color: #ddd;
+    text-align: right;
+    margin-top: -5px;
+}
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 13px;
+    font-weight: 500;
+    display: block;
+    min-height: 18px;
+}
+
+/* Checkbox personalizado */
+.checkbox-group {
+    margin-top: 10px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    color: #ddd;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-top: 3px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #f6cd07;
+}
+
+.checkbox-text {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.link-termos {
+    color: #f6cd07;
+    text-decoration: underline;
+}
+
+.link-termos:hover {
+    color: #fddb00;
+}
+
+/* Botões do formulário */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn {
+    flex: 1;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-icon {
+    font-size: 18px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #f6cd07, #bd9e5d);
+    color: #1a3a5c;
+    box-shadow: 0 4px 12px rgba(246, 205, 7, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #fddb00, #f6cd07);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(246, 205, 7, 0.4);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #f6cd07;
+    border: 2px solid rgba(246, 205, 7, 0.3);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #f6cd07;
+}
+
+/* Mensagem de sucesso */
+.form-success {
+    text-align: center;
+    padding: 60px 40px;
+    animation: fadeIn 0.5s ease;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4caf50, #45a049);
+    color: white;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    animation: scaleIn 0.5s ease;
+}
+
+.form-success h2 {
+    color: #f6cd07;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.form-success p {
+    color: #ddd;
+    font-size: 18px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 880px) {
+    .form-container {
+        padding: 30px 20px;
+        margin: 30px 20px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 580px) {
+    .form-container {
+        padding: 20px 15px;
+        margin: 20px 10px;
+    }
+    
+    .form-group label {
+        font-size: 14px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .form-success {
+        padding: 40px 20px;
+    }
+    
+    .success-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 40px;
+    }
+    
+    .form-success h2 {
+        font-size: 24px;
+    }
+}

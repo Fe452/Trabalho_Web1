@@ -28,7 +28,7 @@
             </nav>
         </header>
 
-        <main class="colecoes">
+        <main class="colecoes flex">
             <section class="content">
               <h1>Coleções</h1>
               <h2>O que são?</h2>
@@ -102,6 +102,17 @@
             </section>
         </main>
 
+        <section class="flex-row">
+                <aside class="anterior-pagina">
+                    <a href="3-Regras.html">&laquo; Página Anterior: Regras</a>
+                </aside>
+
+                <aside class="proximo-pagina">
+                    <a href="5-Campeonatos.html">Próxima Página: Campeonatos &raquo;</a>
+                </aside>
+                
+            </section>
+
         <footer>
             <h1>Trabalho de Programação Web 1 - Hobby</h1>
         </footer>
@@ -128,6 +139,17 @@
             });
         });
 
+        // Função para calcular cartas por página baseado na largura da tela
+        function getCardsPerPage() {
+            const width = window.innerWidth;
+            if (width >= 1400) return 15; // 5 colunas × 3 linhas
+            if (width >= 880) return 10; // 4 colunas × 3 linhas
+           
+            if (width >= 580) return 6;   // 3 colunas × 2 linhas
+            if (width >= 400) return 4;   // 2 colunas × 2 linhas
+            return 4;                      // 2 colunas × 2 linhas (muito pequeno)
+        }
+
         // Função reutilizável para criar carrossel
         function createCarousel(jsonPath, container) {
             (async () => {
@@ -144,8 +166,8 @@
                     const total = unique.length;
 
                     let currentPage = 0;
-                    const cardsPerPage = 10;
-                    const totalPages = Math.ceil(unique.length / cardsPerPage);
+                    let cardsPerPage = getCardsPerPage(); // ← MUDANÇA AQUI
+                    let totalPages = Math.ceil(unique.length / cardsPerPage);
 
                     const carouselContainer = document.createElement('div');
                     carouselContainer.className = 'carousel-container';
@@ -206,26 +228,35 @@
                             
                             rowView.innerHTML = '';
 
-                            for (let i = 0; i < cardsPerPage; i++) {
-                                if (pageCards[i]) {
-                                    const card = pageCards[i];
-                                    const imgUrl = (card.images && (card.images.small || card.images.large)) || card.image || '';
-                                    const imgEl = document.createElement('img');
-                                    imgEl.src = imgUrl;
-                                    imgEl.alt = card.name || '';
-                                    imgEl.loading = 'lazy';
-                                    rowView.appendChild(imgEl);
-                                } else {
-                                    const placeholder = document.createElement('div');
-                                    placeholder.className = 'card-placeholder';
-                                    rowView.appendChild(placeholder);
-                                }
-                            }
+                            // Remover placeholders - deixar grid auto-fit fazer o trabalho
+                            pageCards.forEach(card => {
+                                const imgUrl = (card.images && (card.images.small || card.images.large)) || card.image || '';
+                                const imgEl = document.createElement('img');
+                                imgEl.src = imgUrl;
+                                imgEl.alt = card.name || '';
+                                imgEl.loading = 'lazy';
+                                rowView.appendChild(imgEl);
+                            });
 
                             pageIndicator.textContent = `${page + 1} / ${totalPages}`;
                             rowView.style.opacity = '1';
                         }, 150);
                     }
+
+                    // Recalcular ao redimensionar janela
+                    let resizeTimeout;
+                    window.addEventListener('resize', () => {
+                        clearTimeout(resizeTimeout);
+                        resizeTimeout = setTimeout(() => {
+                            const newCardsPerPage = getCardsPerPage();
+                            if (newCardsPerPage !== cardsPerPage) {
+                                cardsPerPage = newCardsPerPage;
+                                totalPages = Math.ceil(unique.length / cardsPerPage);
+                                currentPage = Math.min(currentPage, totalPages - 1);
+                                renderPage(currentPage);
+                            }
+                        }, 250);
+                    });
 
                     renderPage(0);
                     console.log(`${jsonPath} loaded: ${total} cards`);
