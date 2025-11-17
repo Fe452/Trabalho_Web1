@@ -8,69 +8,6 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon" href="Imagens/Icone.png" type="image/png">
 
-        <style>
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin-top: 30px;
-            text-align: left;
-        }
-
-        .info-coluna {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .info-icone img{
-            width: 36px;
-            height: 36px;
-        }
-
-        .info-icone {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
-        }
-
-        .info-coluna h3 {
-            font-size: 1.1em;
-            color: #f6cd07;
-            margin-bottom: 10px;
-        }
-
-        .quadroGeral .info-coluna p,
-        .quadro .info-coluna p {
-            color: #FFFFFF;
-            font-size: 0.9em;
-            line-height: 1.5;
-            margin-bottom: 5px;
-            word-break: break-word;
-        }
-        
-        .interior-coluna.info-bloco {
-             text-align: left;
-        }
-        .interior-coluna.info-bloco h2 {
-             text-align: left;
-        }
-
-        
-        @media (max-width: 768px) {
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-            .interior-coluna.info-bloco h2 {
-                 text-align: center;
-            }
-        }
-    </style>
-
     </head>
     
     <body>
@@ -105,7 +42,7 @@
 
                 <section class="texto-apresentacao">
                     <h1>Escolha do Tema</h1>
-                    <p class="textoP">Descrição e apresnetaçõ dos autores. blablablablablaalablalabalablab</p>
+                    <p class="texto-just">Descrição e apresnetaçõ dos autores. blablablablablaalablalabalablab</p>
                 </section>
         
                 <section class="container-cartoes">
@@ -193,10 +130,8 @@
                 </p>
             </section>
 
-            <section>
+            <section class="secao-coluna inverter">
                 <div class="quadro">
-
-                    
                     <article class="interior-coluna texto-info">
                         
                         <h2 class="texto-apresentacao">Sobre o Felipe</h2>
@@ -248,9 +183,8 @@
 
     
     
-            <div class="secao-coluna inverter">
-                
-                <section class="quadro">
+            <section class="secao-coluna">
+                <div class="quadro">
                     <article class="interior-coluna">
                         <img src="Imagens/autores/carolPok.png" alt="Img">
                     </article>
@@ -298,12 +232,11 @@
 
                         
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
         </main>
-                            
+            
             <footer>
-        
                 <h1>Trabalho de Programação Web 1 - Hobby</h1>
             </footer>
         </body>

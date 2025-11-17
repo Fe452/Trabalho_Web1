@@ -79,6 +79,9 @@ main {
 }
 
 .quadroGeral{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     margin: 1rem 10rem;
     background-color: #275183;
     padding: 2rem;
@@ -324,10 +327,18 @@ div .regra-final p{
     margin: 25px 0;
 }
 
-.interior-coluna p, .quadroGeral p, .textoP, .secao-conteudo p{
+.interior-coluna p, .quadroGeral p, .secao-conteudo p, .texto-just{
     color: #ffffff;
     font-size: 1.1em;
     margin-bottom: 30px;
+    text-align: justify;
+}
+
+.textoP{
+    color: #ffffff;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 
@@ -935,6 +946,153 @@ html {
     text-align: center;
 }
 
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.info-coluna {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+    
+.info-icone img{
+    width: 36px;
+    height: 36px;
+}
+    
+
+.info-icone {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+    
+
+.info-coluna h3 {
+    font-size: 1.1em;
+    color: #f6cd07;
+    margin-bottom: 10px;
+}
+    
+.quadroGeral .info-coluna p, .quadro .info-coluna p {
+    color: #FFFFFF;
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    word-break: break-word;
+}
+    
+.quadro .info-coluna p {
+    text-align: left;
+}
+
+img.imagem-quadro{
+    width: 500px;
+    height: 300px; 
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #bd9e5d;
+    display: block;
+    margin: 20px auto;
+}
+
+.titulo-topico {
+    margin-top: 40px;
+    
+}
+.descricao-topico {
+    color: #bdc3c7; 
+    font-size: 1em;
+    text-align: justify;
+    margin: 10px auto 20px auto;
+}
+
+
+.container-linha-tempo {
+    display: flex; 
+    justify-content: space-between; 
+    position: relative;
+    margin-top: 50px;
+    padding: 0 20px; 
+    gap: 30px;
+    list-style: none;
+}
+.container-linha-tempo::before {
+    content: '';
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #bdc3c7; 
+    opacity: 0.3;
+    z-index: 1;
+}
+.etapa {
+    flex: 1; 
+    text-align: left;
+    position: relative; 
+    
+}
+
+.numero-etapa {
+    font-size: 3em;
+    font-weight: bold;
+    color: #bdc3c7; 
+    margin-bottom: 20px;
+    position: relative; 
+    padding-left: 30px;
+}
+
+
+.numero-etapa::before {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 50%; 
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #6c99d4;
+    border: 2px solid #254d85; 
+    z-index: 2;
+}
+
+.titulo-etapa {
+    color: #f6cd07;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.quadroGeral .etapa p {
+    color: #FFFFFF;
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+    
+        
+@media (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    .interior-coluna.info-bloco h2 {
+        text-align: center;
+    }
+}
 
 @media (max-width: 900px) {
     .secao-autores {
@@ -970,7 +1128,7 @@ html {
     .interior-coluna {
         width: 100%; 
     }
-    .secao-coluna.inverter{
+    .secao-coluna.inverter .quadro{
         flex-direction: column-reverse;
     }
     .container-cartoes .nome-hp-container {
@@ -1020,6 +1178,36 @@ html {
     .galeria-simples-grid,
     .galeria-simples-grid.galeria-de-5 {
         grid-template-columns: repeat(2, 1fr);
+    }
+    img.imagem-quadro {
+        width: 100%; 
+        height: 250px; 
+    }
+    .container-linha-tempo {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .container-linha-tempo::before {
+        width: 2px;
+        height: 100%;
+        left: 26px;
+        top: 0;
+    }
+    
+    .etapa {
+        padding-left: 50px;
+        margin: 10px;
+        padding: 10px;
+    }
+    
+    .numero-etapa {
+        margin-bottom: 10px;
+    }
+
+    .numero-etapa::before {
+        left: -32px;
+        top: 25px;
     }
 }
 
