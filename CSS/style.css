@@ -1187,7 +1187,6 @@ main.colecoes img {
 
 .double-landscape {
     display: flex;
-    flex-wrap: ;
     justify-content: center;
     flex-direction: row;
 }
@@ -1476,10 +1475,10 @@ aside.proximo-pagina a {
     display: flex;
     align-items: flex-start;
     gap: 20px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background: #1a3a5c; 
+    margin: 40px auto;
+    background: #254d85; 
     padding: 30px;
+    max-width: 1200px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1535,6 +1534,15 @@ aside.proximo-pagina a {
 
 .jogo-container ul li:before {
     content: "✓";
+    position: absolute;
+    left: 0;
+    color: #f6cd07;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.jogo-container ul.campeonatos li:before {
+    content: ">>";
     position: absolute;
     left: 0;
     color: #f6cd07;
