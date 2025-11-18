@@ -102,7 +102,7 @@ main {
     flex-wrap:wrap;
     justify-content: space-evenly safe;
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 20px auto;
     padding: 20px;
     gap: 20px;
     background-color: #254d85;
@@ -380,92 +380,7 @@ div .regra-final p{
 }
 
 
-    .girar { border-bottom: 3px solid #fddb00; padding-bottom: 15px; }
-
-.base {
-  margin: 0;
-  padding: 0px 50px 100px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #000;
-  height: 40vh;
-  display: grid;
-  place-items: center;
-  perspective: 10000px;
-}
-
-/* sizes / tuning */
-:root {
-  --card-w: 160px;
-  --card-h: 220px;
-  --card-radius: 8px;
-  --z-dist: 380px;
-  --angle: 40deg;
-}
-
-.container2 {
-  width: 800px;
-  height: 300px;
-  position: relative;
-  transform-style: preserve-3d;
-  animation: rotate3d 20s linear infinite;
-}
-
-/* card placement (uses --i on each card element) */
-.container2 > div.card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: var(--card-w);
-  height: var(--card-h);
-  transform-style: preserve-3d;
-  transform: translate(-50%, -50%) rotateY(calc(var(--i) * var(--angle))) translateZ(var(--z-dist));
-  transition: transform 0.3s, z-index 0.2s;
-}
-
-/* image styling */
-.container2 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: var(--card-radius);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.5);
-}
-
-/* animation */
-@keyframes rotate3d {
-  from { transform: rotateY(180deg); }
-  to   { transform: rotateY(-180deg); }
-}
-
-/* card faces */
-.card__face {
-  position: absolute;
-  inset: 0;
-  backface-visibility: hidden;
-  border-radius: var(--card-radius);
-  overflow: hidden;
-}
-.card__face--back {
-  background-image: url("../Imagens/coleções/cardBack.jpg");
-  background-size: cover;
-  background-position: center;
-  transform: rotateY(180deg);
-}
-.card__face--front {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-}
-
-/* pause rotation when hovering the carousel and zoom hovered card */
-.container2:hover { animation-play-state: paused; }
-.container2 > div.card:hover {
-  transform: translate(-50%, -50%) rotateY(calc(var(--i) * var(--angle))) translateZ(calc(var(--z-dist) + 40px)) scale(1.15);
-  z-index: 10;
-}
-
+ 
 .base { padding: 30px 20px 60px; }
 
 /* viewer area */
@@ -591,21 +506,19 @@ div .regra-final p{
 .flex-row {
     display: flex;
     flex-direction: row;
+    align-items: stretch;
+    gap: 30px;
+    
 }
 
+.flex-row > * {
+    flex: 1;
+}
 
-.historia{
-    max-width: 600px;
-    text-align: center;
-    color: #f6cd07;
-    font-size: 1.1em;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    background-color: #254d85;
-    padding: 15px;
-    border-radius: 10px;
-    margin: 20px auto;
-  }
+#semfundo {
+    background-color: transparent;
+}
+
 
 .lista {
   
@@ -617,49 +530,11 @@ div .regra-final p{
 
 
 
-.cards-grid { padding: 24px 16px; }
 
-.grid-layout {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(220px, 1fr)); /* 3 colunas iguais, responsivas */
-  grid-auto-rows: auto;
-  gap: 18px;
-  max-width: 1100px;
-  margin: 0 auto;
-  align-items: start;
-  justify-items: stretch; /* faz cada célula ocupar toda a largura da coluna */
-}
 
-/* card common styling */
-.grid-card {
-  width: 100%;            /* preencher toda a coluna */
-  max-width: none;        /* não limitar largura individualmente */
-  min-height: 160px;
-  background: linear-gradient(180deg,#254d85,#275183);
-  color: #f6cd07;
-  border-radius: 10px;
-  padding: 14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
 
-/* central image sizing (não estoure a coluna) */
-.center-image { grid-column: 2; grid-row: 2; display:flex; align-items:center; justify-content:center; }
-.center-img { width: 100%; max-width: 320px; height: auto; display:block; border-radius:8px; }
 
-/* place the empty cards to the left and right of the center image */
-#cardLeft { grid-column: 1; grid-row: 2; }
-#cardRight { grid-column: 3; grid-row: 2; }
 
-/* optional: visually subtle empty card */
-#cardLeft, #cardRight {
-  background: rgba(255,255,255,0.03);
-  min-height: 160px; /* keeps same height as other cards */
-  box-shadow: none;
-}
 
 .turno-table {
     width: 80%;
@@ -695,7 +570,7 @@ aside.card {
     min-height: 150vh; /* increased from 100vh to 150vh for taller aside */
     position: relative;
     overflow: hidden;
-    width: 150%;
+    width: 100%;
     max-width: 320px;
 }
 
@@ -797,43 +672,12 @@ html {
     height: 100%;
     border-radius: 10px;
 }
-.galeria-simples-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    text-align: center;
-}
-.foto-bloco img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 3px solid #bd9e5d; 
-    transition: transform 0.3s ease;
-}
-
-.foto-bloco img:hover {
-    transform: scale(1.05);
-}
-
-.foto-bloco p{
-    margin-top: 15px;
-    font-size: 0.9em;
-    font-weight: bold;
-    color: #f6cd07; 
-}
-.galeria-simples-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    text-align: center;
-    align-items: start; 
-}
 
 
-.galeria-simples-grid.galeria-de-5 {
-    grid-template-columns: repeat(5, 1fr);
-}
+
+
+
+
 .foto-bloco img {
     width: 179px; 
     height: 250px; 
@@ -847,10 +691,12 @@ html {
     transform: scale(1.05);
 }
 .foto-bloco p {
+    width: 179px; 
     margin-top: 5px;
     font-size: 0.9em;
     font-weight: bold;
     color: #f6cd07; 
+    text-align: center;
 }
 
 .titulo-page{ 
@@ -860,13 +706,7 @@ html {
     text-align: center;
 }
 
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 30px;
-    text-align: left;
-}
+
 
 .info-coluna {
     background-color: rgba(255, 255, 255, 0.1);
@@ -896,6 +736,7 @@ html {
     font-size: 1.1em;
     color: #f6cd07;
     margin-bottom: 10px;
+    text-align: left;
 }
     
 .quadroGeral .info-coluna p, .quadro .info-coluna p {
@@ -1117,11 +958,10 @@ img.imagem-quadro{
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-/* Cards grid */
+
 .row-view {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 16px;
     width: 100%;
     height: 100%;
@@ -1131,8 +971,8 @@ img.imagem-quadro{
 }
 
 .row-view img {
-    width: 100%;
-    height: 100%;
+    width: calc((100% - 64px) / 5);
+    height: calc((100% - 16px) / 2);
     object-fit: contain;
     display: block;
     border-radius: 8px;
@@ -1156,47 +996,6 @@ img.imagem-quadro{
 
 
 
-main.colecoes{
-    display: flex;
-    flex-direction: column;
-    
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-main.colecoes .json-inner {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-main.colecoes h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-main.colecoes img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 600px;
-}
-
-.double-landscape {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
-
-.double-landscape img {
-    width: auto;
-    height: auto;
-    max-width: 48%;
-    max-height: 400px;
-}
 
 /* Dual Header Section (Black & White style) */
 .bw-header {
@@ -1367,26 +1166,6 @@ main.colecoes img {
     text-transform: uppercase;
 }
 
-.content{
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #275183;
-    border-radius: 10px;
-    color: #f6cd07;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.content h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #fddb00;
-}
-
 main p{
     color: #ddd;
 }
@@ -1484,11 +1263,6 @@ aside.proximo-pagina a {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.jogo-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
-
 .jogo-container img {
     flex: 0 0 25%;
     max-width: 25%;
@@ -1506,7 +1280,7 @@ aside.proximo-pagina a {
     color: #fff;
 }
 
-.jogo-container h2 {
+ h2 {
     color: #f6cd07;
     font-size: 28px;
     margin-bottom: 15px;
@@ -1739,11 +1513,6 @@ aside.proximo-pagina a {
 }
 
 /* Mensagem de sucesso */
-.form-success {
-    text-align: center;
-    padding: 60px 40px;
-    animation: fadeIn 0.5s ease;
-}
 
 .success-icon {
     width: 80px;
@@ -1759,16 +1528,7 @@ aside.proximo-pagina a {
     animation: scaleIn 0.5s ease;
 }
 
-.form-success h2 {
-    color: #f6cd07;
-    font-size: 32px;
-    margin-bottom: 15px;
-}
 
-.form-success p {
-    color: #ddd;
-    font-size: 18px;
-}
 
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -1791,11 +1551,7 @@ aside.proximo-pagina a {
         gap: 8px;
     }
     
-    .row-view {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        gap: 12px;
-    }
+    
     
     .carousel-nav {
         padding: 10px 14px;
@@ -1895,9 +1651,7 @@ aside.proximo-pagina a {
         font-size: 14px;
     }
     
-    .form-success {
-        padding: 40px 20px;
-    }
+    
     
     .success-icon {
         width: 60px;
@@ -1905,13 +1659,7 @@ aside.proximo-pagina a {
         font-size: 40px;
     }
     
-    .form-success h2 {
-        font-size: 24px;
-    .galeria-simples-grid,
-    .galeria-simples-grid.galeria-de-5 {
-        grid-template-columns: 1fr;
-        }
-    }
+   
 }
 
 @media (max-width: 1024px) {
@@ -1939,10 +1687,7 @@ aside.proximo-pagina a {
     .btn {
         width: 100%;
     }
-    .grid-layout {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
+    
 
     #card1 { order: 1; }
     #card2 { order: 2; }
@@ -1951,7 +1696,7 @@ aside.proximo-pagina a {
     #card4 { order: 5; }
     #card5 { order: 6; }
     #card6 { order: 7; }
-    .grid-card { max-width: 480px; min-height: 120px; }
+    
     .center-img { width: 60%; max-width: 320px; }
 
     .jogo-container {
@@ -2031,10 +1776,7 @@ aside.proximo-pagina a {
         padding: 15px;
     }
     
-    .row-view {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-    }
+    
     
     .carousel-nav {
         padding: 12px 16px;
@@ -2085,9 +1827,7 @@ aside.proximo-pagina a {
             opacity: 0.9;
         }
     }
-    .info-grid {
-        grid-template-columns: 1fr;
-    }
+    
     .interior-coluna.info-bloco h2 {
         text-align: center;
     }
@@ -2115,9 +1855,7 @@ aside.proximo-pagina a {
     .secao-coluna {
         flex-direction: column;
     }
-    .galeria-simples-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    
     .cartao-autor-moldura{
         width: 245px; 
         height: 343px;
@@ -2179,9 +1917,7 @@ aside.proximo-pagina a {
         position: absolute;
         text-align: center;
     }
-    .galeria-simples-grid, .galeria-simples-grid.galeria-de-5 {
-        grid-template-columns: repeat(1, 1fr);
-    }
+    
     img.imagem-quadro {
         width: 100%; 
         height: 250px; 
@@ -2215,9 +1951,7 @@ aside.proximo-pagina a {
 }
 
 @media (max-width: 480px) {
-    .galeria-simples-grid {
-        grid-template-columns: 1fr;
-    }
+    
     aside {
         max-width: 140px;
         min-height: 100vh;
@@ -2247,4 +1981,16 @@ aside.proximo-pagina a {
     .viewer-info { min-width: 0; width: 100%; text-align: center; }
     .conteiner { gap: 8px; }
     .thumb { width: 96px; height: 128px; }
+}
+
+.photo-display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    gap: 65px;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    
 }
