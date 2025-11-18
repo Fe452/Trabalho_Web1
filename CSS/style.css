@@ -100,7 +100,7 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
-    justify-content: space-evenly safe;
+    justify-content: safe space-evenly;
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
@@ -639,7 +639,6 @@ html {
 
 .secao-conteudo {
     padding-top: 10px; 
-    min-height: 70vh;
     padding-left: 30px;
     padding-right: 30px;
     width: 100%; 
@@ -1528,6 +1527,17 @@ aside.proximo-pagina a {
     animation: scaleIn 0.5s ease;
 }
 
+.photo-display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    gap: 65px;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    
+}
 
 
 @keyframes fadeIn {
@@ -1574,6 +1584,7 @@ aside.proximo-pagina a {
     }
     .jogo-container {
         padding: 15px;
+        margin: 1rem 1rem;
     }
     
     .jogo-container img {
@@ -1645,21 +1656,25 @@ aside.proximo-pagina a {
         padding: 12px;
         font-size: 14px;
     }
-    
     .btn {
         padding: 12px 20px;
         font-size: 14px;
     }
-    
-    
-    
     .success-icon {
         width: 60px;
         height: 60px;
         font-size: 40px;
     }
+    .photo-display {
+    gap: 0px;
+    justify-content: space-between;
+    align-content: space-between;
+    }
+    .foto-bloco img {
+    width: 143px; 
+    height: 200px;
     
-   
+}
 }
 
 @media (max-width: 1024px) {
@@ -1863,7 +1878,8 @@ aside.proximo-pagina a {
     }
     .quadro {
         flex-direction: column; 
-        align-items: center; 
+        align-items: center;
+        margin: 1rem 1rem;
     }
     .interior-coluna {
         width: 100%; 
@@ -1948,6 +1964,33 @@ aside.proximo-pagina a {
         left: -32px;
         top: 25px;
     }
+    .flex-row {
+        
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 20px; 
+    }
+
+    .info-coluna {
+        flex: 1 1 150px;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .info-coluna h3 {
+        margin-top: 5px; 
+    }
+
+    .info-coluna .info-icone {
+        margin: 0 auto;
+    }
+    .quadroGeral {
+        flex-direction: column; 
+        align-items: center;
+        margin: 1rem 1rem;
+        padding: 2rem;
+    }
+    
 }
 
 @media (max-width: 480px) {
@@ -1983,14 +2026,14 @@ aside.proximo-pagina a {
     .thumb { width: 96px; height: 128px; }
 }
 
-.photo-display {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
-    gap: 65px;
-    transition: opacity 0.3s ease;
-    opacity: 1;
+@media (max-width: 900px) {
+
     
+
 }
+
+@media (max-width: 580px) {
+        .info-coluna {
+            flex-basis: 100%; 
+        }
+    }
