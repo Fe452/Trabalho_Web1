@@ -1058,6 +1058,7 @@ aside.proximo-pagina a {
     font-size: 2.5em;
     margin-bottom: 15px;
     text-align: center;
+    
 }
 
 h2.texto-apresentacao {
@@ -1065,6 +1066,11 @@ h2.texto-apresentacao {
     text-align: center;
 }
 
+h2.nome-autor-moldura{
+    color: #000;
+    text-shadow: none;
+
+}
 .container-cartoes {
     flex: 2;
     display: flex;
