@@ -37,7 +37,7 @@
                     O TCG possui muitas coleções de cartas diferentes. Desse modo, como introdução a elas, explore as coleções "Fogo Branco" e "Raio Preto", cada uma trazendo uma nova era de cartas e estratégias para o Pokémon TCG.
                 </p>
             </section>
-            <!-- Dual Header Section -->
+
             <section class="bw-header bw-header--entry">
                 <div class="bw-header__images">
                     <div class="bw-header__img black">
@@ -56,7 +56,6 @@
                     </div>
                 </div>
                 
-                <!-- Button Strip Below Images -->
                 <div class="bw-header__button-strip">
                     <div class="bw-header__cta-wrapper">
                         <button class="button bw__cta bw__cta--primary bw__cta--blue" data-expansion="expansion-3">
@@ -83,19 +82,15 @@
                 </div>
             </section>
 
-            <!-- Expansion 2: White Flare -->
             <section class="expansion-section" id="expansion-2">
                 <div class="expansion-header">
-      
                     <h2>Fogo Branco</h2>
                 </div>
                 <div class="expansion-content" data-json="./rsv10pt5.json"></div>
             </section>
 
-            <!-- Expansion 3: Black Bolt -->
             <section class="expansion-section" id="expansion-3">
                 <div class="expansion-header">
-            
                     <h2>Raio Preto</h2>
                 </div>
                 <div class="expansion-content" data-json="./zsv10pt5.json"></div>
@@ -119,7 +114,7 @@
         
         
         <script>
-        // Gerenciador de dual header buttons
+        
         const headerButtons = document.querySelectorAll('.bw__cta');
         const expansionSections = document.querySelectorAll('.expansion-section');
 
@@ -127,30 +122,23 @@
             btn.addEventListener('click', () => {
                 const targetId = btn.dataset.expansion;
                 
-                // Remove active de todos
                 expansionSections.forEach(s => s.classList.remove('active'));
                 
-                // Adiciona active no clicado
                 const targetSection = document.getElementById(targetId);
                 targetSection.classList.add('active');
                 
-                // Scroll suave até a seção
                 targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
 
-        // Função para calcular cartas por página baseado na largura da tela
         function getCardsPerPage() {
             const width = window.innerWidth;
-             // 5 colunas × 3 linhas
-            if (width >= 880) return 10; // 4 colunas × 3 linhas
-           
-            if (width >= 580) return 6;   // 3 colunas × 2 linhas
-            if (width >= 400) return 4;   // 2 colunas × 2 linhas
-            return 4;                      // 2 colunas × 2 linhas (muito pequeno)
+            if (width >= 880) return 10; 
+            if (width >= 580) return 6;
+            if (width >= 400) return 2;
+            return 1;                     
         }
 
-        // Função reutilizável para criar carrossel
         function createCarousel(jsonPath, container) {
             (async () => {
                 async function loadJson() {
@@ -166,7 +154,7 @@
                     const total = unique.length;
 
                     let currentPage = 0;
-                    let cardsPerPage = getCardsPerPage(); // ← MUDANÇA AQUI
+                    let cardsPerPage = getCardsPerPage();
                     let totalPages = Math.ceil(unique.length / cardsPerPage);
 
                     const carouselContainer = document.createElement('div');
@@ -228,7 +216,6 @@
                             
                             rowView.innerHTML = '';
 
-                            // Remover placeholders - deixar grid auto-fit fazer o trabalho
                             pageCards.forEach(card => {
                                 const imgUrl = (card.images && (card.images.small || card.images.large)) || card.image || '';
                                 const imgEl = document.createElement('img');
@@ -243,7 +230,6 @@
                         }, 150);
                     }
 
-                    // Recalcular ao redimensionar janela
                     let resizeTimeout;
                     window.addEventListener('resize', () => {
                         clearTimeout(resizeTimeout);
@@ -267,7 +253,6 @@
             })();
         }
 
-        // Carregar todas as expansões
         document.querySelectorAll('.expansion-content').forEach(container => {
             const jsonPath = container.dataset.json;
             createCarousel(jsonPath, container);
@@ -276,4 +261,3 @@
         
     </body>
 </html>
-
