@@ -16,7 +16,8 @@ html {
     scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -69,12 +70,7 @@ nav ul a:hover {
 
 main {
     color: #f6cd07;
-}
-
-main.flex {
-    text-align: center;
-    flex-direction: column;
-    display: flex;
+    flex: 1;
 }
 
 main p {
@@ -119,6 +115,7 @@ footer h1 {
 
 
 h2 {
+    text-align: center;
     color: #f6cd07;
     font-size: 28px;
     margin-bottom: 15px;
@@ -144,7 +141,7 @@ h2 {
     border-radius: 10px;
     color: #f6cd07;
     align-items: center;
-    
+
 }
 
 
@@ -201,7 +198,7 @@ h1 {
     gap: 30px;
 }
 
-.flex-row > * {
+.flex-row>* {
     flex: 1;
 }
 
@@ -264,7 +261,7 @@ h1 {
 }
 
 .secao-coluna .quadro .interior-coluna .sem-hover {
-   transform: none
+    transform: none
 }
 
 .container-video {
@@ -417,10 +414,11 @@ img.imagem-quadro {
     border-radius: 8px;
 }
 
-.quadroGeral .interior-just p{ 
+.quadroGeral .interior-just p {
     text-align: justify;
 }
-.quadroGeral .interior-just h2{ 
+
+.quadroGeral .interior-just h2 {
     text-align: center;
 }
 
@@ -595,14 +593,6 @@ img.imagem-quadro {
     box-shadow: 0 8px 20px rgba(246, 205, 7, 0.4);
 }
 
-.card-placeholder {
-    width: calc((100% - 64px) / 5);
-    height: calc((100% - 16px) / 2);
-    background: transparent;
-    border-radius: 8px;
-}
-
-
 .bw-header {
     display: flex;
     flex-direction: column;
@@ -772,18 +762,6 @@ img.imagem-quadro {
     font-size: 16px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-}
-
-
-.page-navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    width: 100%;
-    
-    margin: 40px auto;
-    padding: 0 20px;
-    gap: 20px;
 }
 
 aside.anterior-pagina,
@@ -1053,18 +1031,17 @@ aside.proximo-pagina a {
     text-align: center;
 }
 
-
-
 h2.texto-apresentacao {
     font-size: 2em;
     text-align: center;
 }
 
-h2.nome-autor-moldura{
+h2.nome-autor-moldura {
     color: #000;
     text-shadow: none;
 
 }
+
 .container-cartoes {
     flex: 2;
     display: flex;
@@ -1200,15 +1177,6 @@ div .regra-final p {
     background-color: transparent;
 }
 
-.titulo_2 {
-    width: fit-content;
-    margin: 1rem auto;
-    background-color: #275183;
-    padding: 2rem;
-    border-radius: 10px;
-    color: #f6cd07;
-}
-
 .inverter {
     flex-direction: row-reverse;
 }
@@ -1228,25 +1196,29 @@ div .regra-final p {
 
 @media (max-width: 900px) {
     .secao-conteudo {
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-    .foto-bloco img {
-    width: 134px;
-    height: 188px;
-}
-.foto-bloco p {
-    width: 143px;
-    font-size: 0.7em;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
-}
+    .foto-bloco img {
+        width: 134px;
+        height: 188px;
+    }
+
+    .foto-bloco p {
+        width: 143px;
+        font-size: 0.7em;
+
+    }
+
     .photo-display {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2px;
-}
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2px;
+    }
+
     .quadro {
         flex-direction: column;
         align-items: center;
@@ -1396,7 +1368,8 @@ div .regra-final p {
         flex-direction: column-reverse;
     }
 
-    .inverter {
+    .inverter,
+    .inverter_2 {
         flex-direction: column-reverse;
     }
 
@@ -1477,11 +1450,6 @@ div .regra-final p {
         min-width: 280px;
     }
 
-    .page-navigation {
-        padding: 0 10px;
-        gap: 10px;
-    }
-
     aside.anterior-pagina,
     aside.proximo-pagina {
         padding: 15px;
@@ -1516,17 +1484,12 @@ div .regra-final p {
         height: calc((100% - 32px) / 3);
     }
 
-    .card-placeholder {
-        width: calc((100% - 48px) / 4);
-        height: calc((100% - 32px) / 3);
-    }
-
-    h2{
+    h2 {
         text-align: center;
     }
 }
 
-@media (max-width:480px){
+@media (max-width:480px) {
     .row-view img {
         width: 100%;
     }

@@ -1,129 +1,109 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pokemon TCG - Contato</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="icon" href="Imagens/Icone.png" type="image/png">
-    </head>
-    
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="1-index.html">Início</a></li>
-                    <li><a href="2-introducao.html">Introdução</a></li>
-                    <li><a href="3-regras.html">Regras</a></li>
-                    <li><a href="4-colecoes.html">Coleções</a></li>
-                    <li><a href="5-campeonatos.html">Campeonatos</a></li>
-                    <li><a href="6-digital.html">Digital</a></li>
-                    <li><a href="7-curiosidades.html">Curiosidades</a></li>
-                    <li><a href="8-fotos.html">Fotos</a></li>
-                    <li><a href="9-videos.html">Vídeos</a></li>
-                    <li><a href="10-tabela.html">Tabela</a></li>
-                    <li><a href="formulario.html">Contato</a></li>
-                    <li><a href="11-sobre.html">Autores</a></li>
-                </ul>
-            </nav>
-        </header>
-    
-        <main>
-            <section class="titulo-page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon TCG - Contato</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="Imagens/Icone.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="introducao.html">Introdução</a></li>
+                <li><a href="regras.html">Regras</a></li>
+                <li><a href="colecoes.html">Coleções</a></li>
+                <li><a href="campeonatos.html">Campeonatos</a></li>
+                <li><a href="digital.html">Digital</a></li>
+                <li><a href="curiosidades.html">Curiosidades</a></li>
+                <li><a href="fotos.html">Fotos</a></li>
+                <li><a href="videos.html">Vídeos</a></li>
+                <li><a href="tabela.html">Tabela</a></li>
+                <li><a href="formulario.html">Contato</a></li>
+                <li><a href="sobre.html">Autores</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="titulo-page">
             <h1>Entre em Contato</h1>
             <p class="textoP">
                 Tem alguma dúvida sobre Pokémon TCG? Quer compartilhar sua experiência? Envie-nos uma mensagem!
             </p>
         </section>
 
-            <div class="form-container">
-                <form class="contact-form" onsubmit="return false;">
-                    <div class="form-group">
-                        <label for="nome">Nome Completo *</label>
-                        <input 
-                            type="text" 
-                            id="nome" 
-                            name="nome" 
-                            placeholder="Digite seu nome completo"
-                            required
-                            minlength="3"
-                            maxlength="100">
-                    </div>
+        <div class="form-container">
+            <form class="contact-form" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="nome">Nome Completo *</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required
+                        minlength="3" maxlength="100">
+                </div>
 
-                    <div class="form-group">
-                        <label for="email">E-mail *</label>
-                        <input 
-                            type="email" 
-                            id="email" 
-                            name="email" 
-                            placeholder="seu@email.com"
-                            required>
-                    </div>
+                <div class="form-group">
+                    <label for="email">E-mail *</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="telefone">Telefone (opcional)</label>
-                        <input 
-                            type="tel" 
-                            id="telefone" 
-                            name="telefone" 
-                            placeholder="(00) 00000-0000">
-                    </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone (opcional)</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+                </div>
 
-                    <div class="form-group">
-                        <label for="assunto">Assunto *</label>
-                        <select id="assunto" name="assunto" required>
-                            <option value="">Selecione um assunto</option>
-                            <option value="duvida">Dúvida sobre o jogo</option>
-                            <option value="sugestao">Sugestão</option>
-                            <option value="elogio">Elogio</option>
-                            <option value="reclamacao">Reclamação</option>
-                            <option value="outro">Outro</option>
-                        </select>
-                    </div>
+                <div class="form-group">
+                    <label for="assunto">Assunto *</label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="">Selecione um assunto</option>
+                        <option value="duvida">Dúvida sobre o jogo</option>
+                        <option value="sugestao">Sugestão</option>
+                        <option value="elogio">Elogio</option>
+                        <option value="reclamacao">Reclamação</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
 
-                    <div class="form-group">
-                        <label for="mensagem">Mensagem *</label>
-                        <textarea 
-                            id="mensagem" 
-                            name="mensagem" 
-                            rows="6"
-                            placeholder="Escreva sua mensagem aqui..."
-                            required
-                            minlength="10"
-                            maxlength="1000"></textarea>
-                    </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem *</label>
+                    <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem aqui..." required
+                        minlength="10" maxlength="1000"></textarea>
+                </div>
 
-                    <div class="form-group checkbox-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" id="termos" name="termos" required>
-                            <span class="checkbox-text">
-                                Aceito os termos de uso e política de privacidade *
-                            </span>
-                        </label>
-                    </div>
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="termos" name="termos" required>
+                        <span class="checkbox-text">
+                            Aceito os termos de uso e política de privacidade *
+                        </span>
+                    </label>
+                </div>
 
-                    <div class="form-actions">
-                        <button type="reset" class="btn btn-secondary">Limpar</button>
-                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-                    </div>
-                </form>
-            </div>
-        </main>
+                <div class="form-actions">
+                    <button type="reset" class="btn btn-secondary">Limpar</button>
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </div>
+            </form>
+        </div>
+    </main>
 
-        <section class="flex-row">
-                <aside class="anterior-pagina">
-                    <a href="10-tabela.html">&laquo; Anterior: Tabela</a>
-                </aside>
+    <section class="flex-row">
+        <aside class="anterior-pagina">
+            <a href="tabela.html">&laquo; Anterior: Tabela</a>
+        </aside>
 
-                <aside class="proximo-pagina">
-                    <a href="11-sobre.html">Próximo: Autores &raquo;</a>
-                </aside>
-                
-            </section>
+        <aside class="proximo-pagina">
+            <a href="sobre.html">Próximo: Autores &raquo;</a>
+        </aside>
 
-        <footer>
-            <h1>Trabalho de Programação Web 1 - Hobby</h1>
-        </footer>
-    </body>
+    </section>
+
+    <footer>
+        <h1>Trabalho de Programação Web 1 - Hobby</h1>
+    </footer>
+</body>
+
 </html>
